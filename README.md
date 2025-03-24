@@ -26,3 +26,14 @@ Ce projet implémente le jeu Wordle en TypeScript avec une interface web et une 
 1. Installer les dépendances :
    ```bash
    npm install
+   ```
+
+2. Lancer le serveur de développement :
+   ```bash
+   npm run dev
+
+(Votre navigateur s'ouvrira sur l'interface de Wordle)
+
+3. Exécuter les tests :
+   ```bash
+   npm run test
