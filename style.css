@@ -1,0 +1,189 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #121213;
+    color: #d7dadc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(6, 60px);
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.tile {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #3a3a3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #121213;
+    transition: background 0.3s, border 0.3s;
+    border-radius: 5px;
+}
+
+.tile.green {
+    background: #6aaa64;
+    border-color: #6aaa64;
+    color: #ffffff;
+}
+
+.tile.yellow {
+    background: #c9b458;
+    border-color: #c9b458;
+    color: #ffffff;
+}
+
+.tile.gray {
+    background: #3a3a3c;
+    border-color: #3a3a3c;
+    color: #ffffff;
+}
+
+#inputArea {
+    margin-bottom: 10px;
+}
+
+input#guessInput {
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 150px;
+    border: 2px solid #3a3a3c;
+    background: #121213;
+    color: #ffffff;
+    outline: none;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    background: #818384;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #3a3a3c;
+}
+
+#message {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+#error-message {
+    margin: 10px auto;         /* 10px top and bottom, auto left/right */
+    font-size: 1rem;           /* Smaller text */
+    font-weight: bold;         /* Bold text */
+    /* Internal padding */
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 8px;        /* More rounded corners */
+    text-align: center;
+    min-height: 20px;          /* Fixed space to avoid layout shift */
+    transition: opacity 0.3s;
+    opacity: 0;                /* Hidden by default */
+    display: flex;
+    align-items: center;       /* Vertical centering */
+    justify-content: center;   /* Horizontal centering */
+    padding: 5px 5px 5px 10px;
+}
+
+
+
+
+#stats {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+/* Exemple de styles pour le clavier */
+#virtual-keyboard {
+    margin-top: 20px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.key {
+    margin: 2px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Statuts de couleur */
+.key.green {
+    background-color: #6aaa64;
+    color: white;
+}
+
+.key.yellow {
+    background-color: #c9b458;
+    color: white;
+}
+
+.key.gray {
+    background-color: #787c7e;
+    color: white;
+}
+
+.key.special-key {
+    background-color: #d3d6da;
+}
+/* Style pour les tuiles en rouge lors d'un mot invalide */
+.tile.red {
+    background: #e57373; /* Exemple de rouge */
+    border-color: #e57373;
+    color: white;
+}
+
+/* Style pour les touches désactivées */
+button.key:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-4px); }
+    40% { transform: translateX(4px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+    100% { transform: translateX(0); }
+}
+
+.tile.vibrate {
+    animation: vibrate 0.3s ease;
+}
+

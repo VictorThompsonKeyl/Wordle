@@ -1,0 +1,27 @@
+{
+  "name": "WORDLE",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "dev": "vite",
+    "coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.0.5",
+    "an-array-of-english-words": "^2.0.0",
+    "an-array-of-french-words": "^2.0.0",
+    "jsdom": "^26.1.0",
+    "typescript": "^5.5.3",
+    "vite": "^6.2.2",
+    "vitest": "^3.0.5"
+  },
+  "private": true,
+  "dependencies": {
+    "an-array-of-english-words": "^2.0.0",
+    "an-array-of-french-words": "^2.0.0",
+    "french-words": "^3.4.0"
+  }
+}
